@@ -40,5 +40,4 @@ userSchema.pre('validate', function(next){
   next();
 });
 
-
 module.exports = mongoose.model('User', userSchema);
