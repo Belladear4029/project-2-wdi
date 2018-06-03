@@ -9,8 +9,8 @@ const userSchema = new mongoose.Schema({
   timestamps: true
 });
 
-userSchema.virtual('pictures', {
-  ref: 'Picture',
+userSchema.virtual('recipes', {
+  ref: 'recipe',
   foreignField: 'creator',
   localField: '_id'
 });

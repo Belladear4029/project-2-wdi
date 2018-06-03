@@ -1,0 +1,13 @@
+<h2>All Recipes</h2>
+
+<ul>
+  <% recipes.forEach( recipe =>{ %>
+    <li>
+      <a href="/recipes/<%= recipe.id %>"><%= recipe.title %></a>
+      <img style="max-width: 200px " src='<%= recipe.url %>' alt='<%= recipe.title %>' />
+      <% if(recipe.creator){%>
+        <%= recipe.creator.username %>
+      <% } %>
+    </li>
+  <% }) %>
+</ul>

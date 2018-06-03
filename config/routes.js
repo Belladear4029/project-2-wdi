@@ -3,13 +3,11 @@ const router = express.Router();
 
 const registrations = require('../controllers/registrations');
 const sessions = require('../controllers/sessions');
-const pictures = require('../controllers/pictures');
+const recipes = require('../controllers/recipes');
 
 router.get('/', (req, res) => res.render('home', {
   isHomepage: true
 }));
-
-router.route('/')
 
 router.route('/register')
   .get(registrations.new)
@@ -20,11 +18,18 @@ router.route('/login')
   .post(sessions.create);
 
 router.route('/logout')
+  .get(sessions.delete);
 
-router.route('/')
-
-router.route('/')
-
-router.route('/')
+router.route('/recipes')
+  .get(recipes.index)
+  .post(recipes.create);
+router.route('/recipes/new')
+  .get(recipes.new);
+router.route('/recipes/:id')
+  .get(recipes.show)
+  .put(recipes.update)
+  .delete(recipes.delete);
+router.route('/recipes/:id/edit')
+  .get(recipes.edit);
 
 module.exports = router;

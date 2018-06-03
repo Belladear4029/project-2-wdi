@@ -1,0 +1,7 @@
+<h2>  <%= recipe.title %></h2>
+<img src='<%= recipe.url %>' alt='<%= recipe.title %>' />
+
+<form class="" action="/recipes/<%= recipe.id %>/comment" method="post">
+  <textarea name="content" rows="8" cols="80"></textarea>
+  <button name="button">Post a comment</button>
+</form>
