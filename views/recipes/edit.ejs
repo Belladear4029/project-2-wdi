@@ -1,4 +1,4 @@
-<form action="/recipes/<%= recipe.id %>" method="POST">
+<form action="/recipes/<%= recipe._id %>" method="POST">
   <input type="hidden" name="_method" value="PUT">
   <div class="field">
     <label for="title">Title</label>
@@ -15,7 +15,7 @@
   <div class="field">
     <div class="control">
       <label for="ingredients">Ingredients</label>
-      <input type="ingredients" class="input" id="ingredients" value="<%= recipe.ingredients %>">
+      <input type="ingredients" name="ingredients" class="input" id="ingredients" value="<%= recipe.ingredients %>">
     </div>
   </div>
   <div class="field">

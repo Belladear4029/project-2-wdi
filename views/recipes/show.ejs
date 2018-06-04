@@ -10,7 +10,10 @@
       <li><%= recipe.ingredients %></li>
     </ul>
     <h5>Comments</h5>
-
+    <% recipe.comments.forEach( comment =>{ %>
+    <li><%= locals.user.username %></li>
+    <li><%= comment.content %></li>
+    <% }) %>
     <form class="" action="/recipes/<%= recipe.id %>/comment" method="POST">
       <textarea name="content" rows="8" cols="80"></textarea>
       <button name="button">Post a comment</button>

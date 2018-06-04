@@ -4,6 +4,9 @@
 body {
   background: #B8D8D8; }
 
+li {
+  list-style-type: none; }
+
 h1 {
   font-family: 'Lobster', cursive;
   font-size: 70px;
@@ -18,8 +21,10 @@ h5 {
   .navbar h1 {
     font-size: 20px;
     color: #eef5db; }
-  .navbar a {
+  .navbar .navbar-menu {
     color: #eef5db; }
+    .navbar .navbar-menu a {
+      color: #eef5db; }
 
 .links {
   text-align: center; }

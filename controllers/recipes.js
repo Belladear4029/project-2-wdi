@@ -16,6 +16,7 @@ function showRoute(req, res){
     .exec()
     .then( recipe =>{
       res.render('recipes/show', {recipe});
+      console.log(recipe);
     });
 }
 
@@ -40,13 +41,15 @@ function editRoute(req, res){
     .exec()
     .then( recipe =>{
       res.render('recipes/edit', {recipe});
+      console.log(recipe);
     });
 }
 function updateRoute(req, res){
   Recipe
     .findById(req.params.id)
-    .update(req.body)
     .then( recipe =>{
+      Object.assign(recipe, req.body);
+      recipe.save();
       return res.redirect(`/recipes/${recipe.id}`);
     });
 }
@@ -63,7 +66,9 @@ function createCommentRoute(req, res){
     .findById(req.params.id)
     .exec()
     .then( recipe => {
-      recipe.comments.create(req.body);
+      recipe.comments.push(req.body);
+      recipe.save();
+      console.log(recipe);
       return res. redirect(`/recipes/${recipe.id}`);
     });
 }
