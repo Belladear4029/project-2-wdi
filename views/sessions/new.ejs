@@ -1,6 +1,7 @@
 <% if(locals.message) { %>
   <p><%= message %></p>
 <% } %>
+<h1>Instagrub</h1>
 <form method="POST" action="/login">
   <div>
     <label for="email">Email</label>
@@ -10,5 +11,5 @@
     <label for="password">Password</label>
     <input class="input" type="password" name="password" id="password">
   </div>
-  <button class="button">Login</button>
+  <button class="button" id="login-button">Login</button>
 </form>

@@ -1,12 +1,12 @@
 <h2>All Recipes</h2>
 
-<ul class="columns is-multiline is-desktop is-mobile">
+<ul class="columns is-multiline is-desktop is-tablet is-mobile">
   <% recipes.forEach( recipe =>{ %>
-    <ul class="column is-one-quarter-desktop is-half-mobile">
+    <ul class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
     <a id="recipe-link" href="/recipes/<%= recipe.id %>">
       <li >
         <h2><%= recipe.title %></h2>
-        <img id="recipe-image" style="height: 250px;" src='<%= recipe.url %>' alt='<%= recipe.title %>'/>
+        <img id="recipe-image" style="height: 250px; width: auto" src='<%= recipe.url %>' alt='<%= recipe.title %>'/>
       </li>
       </a>
       <li>

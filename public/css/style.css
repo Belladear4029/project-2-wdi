@@ -19,6 +19,24 @@ h2 {
 h5 {
   font-size: 20px; }
 
+.button {
+  border: solid 2px #FE5F55; }
+
+.homepage .links {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 400px; }
+  .homepage .links .link {
+    margin: 50px 20px;
+    color: #FE5F55;
+    font-weight: bold; }
+
+#signup-button {
+  margin-top: 20px; }
+
+#login-button {
+  margin-top: 20px; }
+
 .navbar {
   background-color: #4F6367; }
   .navbar h1 {
@@ -39,12 +57,6 @@ h5 {
       color: #FE5F55;
       background-color: #eef5db; }
 
-.links {
-  text-align: center; }
-  .links .link {
-    margin: 50px 20px;
-    color: #FE5F55; }
-
 #recipe-link {
   color: #4F6367; }
   #recipe-link h2 {
@@ -56,17 +68,23 @@ h5 {
 #recipe-title {
   font-size: 30px; }
 
-.show-comments #comments {
-  border: solid 1px #4F6367;
-  border-radius: 10px;
-  background-color: #fff;
-  margin: 10px auto; }
-  .show-comments #comments #username {
-    font-weight: bold;
-    padding: 0 20px; }
+.show-comments {
+  margin-top: 30px; }
+  .show-comments #comments {
+    border: solid 1px #4F6367;
+    border-radius: 10px;
+    background-color: #fff;
+    margin: 10px auto; }
+    .show-comments #comments #username {
+      font-weight: bold;
+      padding: 0 20px; }
+    .show-comments #comments #comment {
+      font-size: 12px; }
 
-.button {
-  border: solid 2px #FE5F55;
-  margin: 20px auto; }
+.show-buttons {
+  display: inline-flex;
+  margin-top: 20px; }
+  .show-buttons .button {
+    margin-right: 20px; }
 
 /*# sourceMappingURL=style.css.map */

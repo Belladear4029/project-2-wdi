@@ -26,6 +26,34 @@ h5 {
   font-size: 20px;
 }
 
+.button {
+  border: solid 2px #FE5F55;
+}
+
+//Homepage
+.homepage {
+  .links {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 400px;
+    .link {
+      margin: 50px 20px;
+      color: #FE5F55;
+      font-weight: bold;
+    }
+  }
+}
+
+//sign up
+#signup-button {
+  margin-top: 20px;
+}
+
+//login
+#login-button {
+  margin-top: 20px;
+}
+
 //navbar
 .navbar {
   background-color: #4F6367;
@@ -55,20 +83,6 @@ h5 {
   }
 }
 
-//Homepage
-.links {
-  text-align: center;
-  .link {
-    margin: 50px 20px;
-    color: #FE5F55;
-  }
-}
-
-//sign up
-
-
-//login
-
 
 //index
 #recipe-link {
@@ -91,6 +105,7 @@ h5 {
 }
 
 .show-comments {
+  margin-top: 30px;
   #comments {
     border: solid 1px #4F6367;
     border-radius: 10px;
@@ -100,15 +115,20 @@ h5 {
       font-weight: bold;
       padding: 0 20px;
     }
+    #comment {
+      font-size: 12px;
+    }
   }
 }
 
-
-
-.button {
-  border: solid 2px #FE5F55;
-  margin: 20px auto;
+.show-buttons {
+  display: inline-flex;
+  margin-top: 20px;
+  .button{
+    margin-right: 20px;
+  }
 }
+
 
 
 //new recipe
