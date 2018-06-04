@@ -1,8 +1,8 @@
 <h2>All Recipes</h2>
 
-<ul>
+<ul class="columns">
   <% recipes.forEach( recipe =>{ %>
-    <li>
+    <li class=" column is-one-quarter">
       <a href="/recipes/<%= recipe.id %>"><%= recipe.title %></a>
       <img style="max-width: 200px " src='<%= recipe.url %>' alt='<%= recipe.title %>' />
       <% if(recipe.creator){%>

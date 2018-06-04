@@ -35,13 +35,28 @@ function createRoute(req, res){
 }
 
 function editRoute(req, res){
-
+  Recipe
+    .findById(req.params.id)
+    .exec()
+    .then( recipe =>{
+      res.render('recipes/edit', {recipe});
+    });
 }
 function updateRoute(req, res){
-
+  Recipe
+    .findById(req.params.id)
+    .update(req.body)
+    .then( recipe =>{
+      return res.redirect(`/recipes/${recipe.id}`);
+    });
 }
 function deleteRoute(req, res){
-
+  Recipe
+    .findById(req.params.id)
+    .then( recipe =>{
+      recipe.remove();
+      return res.redirect('/recipes');
+    });
 }
 function createCommentRoute(req, res){
 

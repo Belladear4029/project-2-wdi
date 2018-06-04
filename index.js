@@ -1,4 +1,5 @@
 const express = require('express');
+const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const expressLayouts = require('express-ejs-layouts');
 const session = require('express-session');
@@ -19,6 +20,8 @@ app.set('views', `${__dirname}/views`);
 app.use(express.static(`${__dirname}/public`));
 
 app.use(expressLayouts);
+
+app.use(morgan('dev'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 

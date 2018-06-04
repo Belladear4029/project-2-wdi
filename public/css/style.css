@@ -1,13 +1,18 @@
 h1 {
   font-family: 'Lobster', cursive;
   font-size: 70px;
-  text-align: center;
-}
+  text-align: center; }
 
 .links {
-  text-align: center;
-}
+  text-align: center; }
+  .links .link {
+    margin: 50px 20px;
+    color: red; }
 
-.link {
-  margin: 50px 20px;
-}
+#recipe-title {
+  font-size: 30px; }
+
+#ingredients-header {
+  font-size: 20px; }
+
+/*# sourceMappingURL=style.css.map */
