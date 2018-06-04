@@ -1,18 +1,33 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #B8D8D8; }
+
 h1 {
   font-family: 'Lobster', cursive;
   font-size: 70px;
-  text-align: center; }
+  text-align: center;
+  color: #4F6367; }
+
+h5 {
+  font-size: 20px; }
+
+.navbar {
+  background-color: #4F6367; }
+  .navbar h1 {
+    font-size: 20px;
+    color: #eef5db; }
+  .navbar a {
+    color: #eef5db; }
 
 .links {
   text-align: center; }
   .links .link {
     margin: 50px 20px;
-    color: red; }
+    color: #FE5F55; }
 
 #recipe-title {
   font-size: 30px; }
-
-h5 {
-  font-size: 20px; }
 
 /*# sourceMappingURL=style.css.map */

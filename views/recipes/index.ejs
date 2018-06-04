@@ -2,12 +2,15 @@
 
 <ul class="columns">
   <% recipes.forEach( recipe =>{ %>
-    <li class=" column is-one-quarter">
-      <a href="/recipes/<%= recipe.id %>"><%= recipe.title %></a>
-      <img style="max-width: 200px " src='<%= recipe.url %>' alt='<%= recipe.title %>' />
+    <ul class=" column is-one-quarter">
+      <li >
+        <a href="/recipes/<%= recipe.id %>"><%= recipe.title %></a>
+        <img style="max-width: 200px " src='<%= recipe.url %>' alt='<%= recipe.title %>' />
+      </li>
+      <li>
       <% if(recipe.creator){%>
-        <%= recipe.creator.username %>
-      <% } %>
-    </li>
+        By <%= recipe.creator.username %>
+        <% } %>
+      </li>
+    </ul>
   <% }) %>
-</ul>
