@@ -32,4 +32,7 @@ router.route('/recipes/:id')
 router.route('/recipes/:id/edit')
   .get(recipes.edit);
 
+router.route('/recipes/:id/comment')
+  .post(recipes.createComment);
+
 module.exports = router;

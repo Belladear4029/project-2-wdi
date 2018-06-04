@@ -59,7 +59,13 @@ function deleteRoute(req, res){
     });
 }
 function createCommentRoute(req, res){
-
+  Recipe
+    .findById(req.params.id)
+    .exec()
+    .then( recipe => {
+      recipe.comments.create(req.body);
+      return res. redirect(`/recipes/${recipe.id}`);
+    });
 }
 
 module.exports = {
