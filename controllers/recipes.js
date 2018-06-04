@@ -16,7 +16,6 @@ function showRoute(req, res){
     .exec()
     .then( recipe =>{
       res.render('recipes/show', {recipe});
-      console.log(recipe);
     });
 }
 

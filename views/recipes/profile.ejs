@@ -9,12 +9,7 @@
         <img style="height: 200px;" src='<%= recipe.url %>' alt='<%= recipe.title %>' />
         </a>
       </li>
-      <li>
-      <% if(recipe.creator){%>
-        By <%= recipe.creator.username %>
-        <% } %>
-      </li>
     </ul>
   <% }) %>
-  <% } %>
 </ul>
+<% } %>

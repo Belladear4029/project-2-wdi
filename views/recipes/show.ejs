@@ -2,7 +2,9 @@
 <div class="columns">
   <div class="column is-half">
     <img src="<%= recipe.url %>" alt="<%= recipe.title %>" />
-    <h5><%= recipe.creator.username %></h5>
+    <% if (recipe.creator){ %>
+      <h5><%= recipe.creator.username %></h5>
+    <% } %>
   </div>
   <div class="column is-half">
     <div class="show-ingredients">
@@ -14,7 +16,7 @@
     <div class="show-comments">
       <h5>Comments</h5>
         <% recipe.comments.forEach( comment =>{ %>
-          <li id="comments"><span id="username"><%= locals.user.username %></span><span id="comment"><%=comment.content%></span></li>
+          <li id="comments"><span id="username"><%= comment.user %></span><span id="comment"><%=comment.content%></span></li>
           <% }) %>
       <form id="comment-input" action="/recipes/<%= recipe.id %>/comment" method="POST">
         <textarea name="content" rows="8" cols="80"></textarea>
