@@ -1,7 +1,8 @@
-<h2>All Recipes</h2>
+<% if(locals.isLoggedIn){%>
+<h2>My Recipes</h2>
 
 <ul class="columns">
-  <% recipes.forEach( recipe =>{ %>
+  <% locals.user.recipes.forEach( recipe =>{ %>
     <ul class=" column is-one-quarter">
       <li >
         <a href="/recipes/<%= recipe.id %>"><%= recipe.title %>
@@ -15,4 +16,5 @@
       </li>
     </ul>
   <% }) %>
+  <% } %>
 </ul>

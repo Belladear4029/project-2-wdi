@@ -23,6 +23,8 @@ router.route('/logout')
 router.route('/recipes')
   .get(recipes.index)
   .post(recipes.create);
+router.route('/recipes/myrecipes')
+  .get(recipes.profile);
 router.route('/recipes/new')
   .get(recipes.new);
 router.route('/recipes/:id')

@@ -68,8 +68,17 @@ function createCommentRoute(req, res){
     .then( recipe => {
       recipe.comments.push(req.body);
       recipe.save();
-      console.log(recipe);
       return res. redirect(`/recipes/${recipe.id}`);
+    });
+}
+
+function myRecipesRoute(req, res){
+  Recipe
+    .find()
+    .populate('creator')
+    .exec()
+    .then( recipes =>{
+      res.render('recipes/profile', {recipes});
     });
 }
 
@@ -81,5 +90,6 @@ module.exports = {
   edit: editRoute,
   update: updateRoute,
   delete: deleteRoute,
-  createComment: createCommentRoute
+  createComment: createCommentRoute,
+  profile: myRecipesRoute
 };
