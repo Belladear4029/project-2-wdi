@@ -35,4 +35,16 @@ h5 {
 #recipe-title {
   font-size: 30px; }
 
+.show-comments #comments {
+  border: solid 1px #4F6367;
+  border-radius: 10px;
+  background-color: #fff;
+  margin: 10px auto; }
+  .show-comments #comments #username {
+    font-weight: bold;
+    padding: 0 20px; }
+
+.button {
+  border: solid 2px #FE5F55; }
+
 /*# sourceMappingURL=style.css.map */

@@ -60,13 +60,33 @@ h5 {
   font-size: 30px;
 }
 
+.show-ingredients {
+
+}
+
+.show-comments {
+  #comments {
+    border: solid 1px #4F6367;
+    border-radius: 10px;
+    background-color: #fff;
+    margin: 10px auto;
+    #username {
+      font-weight: bold;
+      padding: 0 20px;
+    }
+  }
+  #comment-input {
+
+    
+  }
+}
+
+.button {
+  border: solid 2px #FE5F55;
+}
 
 
 //new recipe
 
 
 //edit recipe
-
-// .input {
-//   height: 40px;
-// }
