@@ -21,15 +21,17 @@
       <h5>Comments</h5>
         <% recipe.comments.forEach( comment =>{ %>
           <li id="comments">
-            <span class="user-comment" id="username"><%= comment.user.username %></span><span class="user-comment" id="comment"><%=comment.content%></span>
-            <form id="delete" action="/recipes/<%= recipe.id %>/comment/<%= comment.id %>" method="POST">
-              <input type="hidden" name="_method" value="DELETE">
-              <button class="button" name="button">Delete</button>
+            <a href="/users/<%= comment.user.id %>" class="user-comment" id="username"><%= comment.user.username %></a><span class="user-comment" id="comment"><%=comment.content%></span>
+            <% if(comment.user.id === locals.user.id){ %>
+              <form id="delete" action="/recipes/<%= recipe.id %>/comment/<%= comment.id %>" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <button id="delete" class="button" name="button">Delete</button>
               </form>
+            <% } %>
           </li>
         <% }) %>
       <form id="comment-input" action="/recipes/<%= recipe.id %>/comment" method="POST">
-        <textarea name="content" rows="8" cols="80"></textarea>
+        <textarea id="textarea" name="content" rows="8" cols="80"></textarea>
         <button class="button" name="button">Post a comment</button>
       </form>
     </div>

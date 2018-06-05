@@ -20,7 +20,8 @@ h5 {
   font-size: 20px; }
 
 .button {
-  border: solid 2px #FE5F55; }
+  border: solid 2px #FE5F55;
+  border-radius: 10px; }
 
 .homepage .links {
   text-align: center;
@@ -76,15 +77,37 @@ h5 {
   margin-top: 30px; }
   .show-comments #comments {
     display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 30px;
+    padding: 5px 0;
     border: solid 1px #4F6367;
     border-radius: 10px;
     background-color: #fff;
     margin: 10px auto; }
     .show-comments #comments #username {
+      color: #4F6367;
+      font-size: 12px;
       font-weight: bold;
-      padding: 0 20px; }
+      padding: 0 15px; }
+      .show-comments #comments #username:hover {
+        color: #FE5F55; }
     .show-comments #comments #comment {
       font-size: 12px; }
+    .show-comments #comments #delete {
+      color: #7A9E9F;
+      font-size: 12px;
+      font-weight: bold;
+      border: none; }
+      .show-comments #comments #delete:hover {
+        color: #4F6367; }
+  .show-comments #comment-input #textarea {
+    border-radius: 10px;
+    border: solid 1px #4F6367;
+    width: 100%;
+    padding: 10px; }
+  .show-comments #comment-input .button {
+    margin-top: 10px; }
 
 .show-buttons {
   display: inline-flex;

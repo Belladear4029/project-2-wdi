@@ -81,7 +81,6 @@ function deleteCommentRoute(req, res, next){
     .exec()
     .then( recipe => {
       const comment = recipe.comments.id(req.params.commentId);
-      console.log(comment);
       comment.remove();
       return recipe.save();
     })

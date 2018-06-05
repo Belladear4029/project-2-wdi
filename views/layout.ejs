@@ -13,6 +13,9 @@
   <% if(locals.isLoggedIn){ %>
     <%- include ./partials/_navbar %>
   <% } %>
+  <% if(locals.isLoggedOut) { %>
+    <%- include ./home %>
+  <% } %>
     <section class="section">
       <div class="container">
         <%- body %>

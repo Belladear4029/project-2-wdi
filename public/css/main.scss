@@ -28,6 +28,7 @@ h5 {
 
 .button {
   border: solid 2px #FE5F55;
+  border-radius: 10px;
 }
 
 //Homepage
@@ -115,16 +116,45 @@ h5 {
   margin-top: 30px;
   #comments {
     display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 30px;
+    padding: 5px 0;
     border: solid 1px #4F6367;
     border-radius: 10px;
     background-color: #fff;
     margin: 10px auto;
     #username {
+      color: #4F6367;
+      font-size: 12px;
       font-weight: bold;
-      padding: 0 20px;
+      padding: 0 15px;
+      &:hover {
+        color: #FE5F55;
+      }
     }
     #comment {
       font-size: 12px;
+    }
+    #delete {
+      color: #7A9E9F;
+      font-size: 12px;
+      font-weight: bold;
+      border: none;
+      &:hover {
+        color: #4F6367;
+      }
+    }
+  }
+  #comment-input{
+    #textarea {
+    border-radius: 10px;
+    border: solid 1px #4F6367;
+    width: 100%;
+    padding: 10px;
+    }
+    .button {
+      margin-top: 10px;
     }
   }
 }
