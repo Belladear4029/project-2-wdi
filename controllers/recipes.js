@@ -15,6 +15,7 @@ function showRoute(req, res){
     .findById(req.params.id)
     .populate('creator')
     .populate('comments.user')
+    .ingredients.split(', ')
     .exec()
     .then( recipe =>{
       res.render('recipes/show', {recipe});
@@ -42,7 +43,6 @@ function editRoute(req, res){
     .exec()
     .then( recipe =>{
       res.render('recipes/edit', {recipe});
-      console.log(recipe);
     });
 }
 function updateRoute(req, res){
@@ -84,7 +84,6 @@ function myRecipesRoute(req, res){
       res.render('recipes/user-profile', {recipes});
     });
 }
-
 
 
 module.exports = {

@@ -3,29 +3,31 @@
   <div class="column is-half">
     <img src="<%= recipe.url %>" alt="<%= recipe.title %>" />
     <% if (recipe.creator){ %>
-      <h5><%= recipe.creator.username %></h5>
-    <% } %>
+      <a class="user-link" href="/users/<%= recipe.creator.id %>"><h5>By <%= recipe.creator.username %></h5></a>
+      <% } %>
   </div>
   <div class="column is-half">
     <div class="show-ingredients">
       <h5>Ingredients</h5>
-      <ul>
-        <li><%= recipe.ingredients %></li>
-      </ul>
+      <% console.log(recipe.ingredients) %>
+      <% recipe.ingredients.forEach( ingredient =>{ %>
+
+        <% console.log(recipe.ingredient) %>
+        <li><%= recipe.ingredient %></li>
+      <% }) %>
     </div>
-    <% if(recipe.creator.toString() === locals.user.id){ %>
-    <div class="show-buttons">
-      <a class="button" href="/recipes/<%= recipe.id %>/edit">Edit</a>
-      <form class="" action="/recipes/<%= recipe.id %>/" method="POST">
-        <input type="hidden" name="_method" value="DELETE">
-        <button class="button" name="button">Delete</button>
-      </form>
-    </div>
+    <% if(recipe.creator.id === locals.user.id){ %>
+      <div class="show-buttons">
+        <a class="button" href="/recipes/<%= recipe.id %>/edit">Edit</a>
+        <form class="" action="/recipes/<%= recipe.id %>/" method="POST">
+          <input type="hidden" name="_method" value="DELETE">
+          <button class="button" name="button">Delete</button>
+        </form>
+      </div>
     <% } %>
     <div class="show-comments">
       <h5>Comments</h5>
         <% recipe.comments.forEach( comment =>{ %>
-          <% %>
           <li id="comments"><span id="username"><%= comment.user.username %></span><span id="comment"><%=comment.content%></span></li>
           <% }) %>
       <form id="comment-input" action="/recipes/<%= recipe.id %>/comment" method="POST">

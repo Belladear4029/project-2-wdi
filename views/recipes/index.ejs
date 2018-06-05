@@ -6,7 +6,9 @@
     <a id="recipe-link" href="/recipes/<%= recipe.id %>">
       <li >
         <h2><%= recipe.title %></h2>
-        <img id="recipe-image" style="height: 250px; width: auto" src='<%= recipe.url %>' alt='<%= recipe.title %>'/>
+        <figure class="image is-square">
+          <img id="recipe-image" style="height: 250px; width: auto" src='<%= recipe.url %>' alt='<%= recipe.title %>'/>
+        </figure>
       </li>
       </a>
       <li>
