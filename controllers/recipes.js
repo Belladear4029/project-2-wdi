@@ -15,7 +15,6 @@ function showRoute(req, res){
     .findById(req.params.id)
     .populate('creator')
     .populate('comments.user')
-    // .ingredients.split(', ')
     .exec()
     .then( recipe =>{
       res.render('recipes/show', {recipe});
@@ -29,7 +28,7 @@ function newRoute(req, res){
 
 function createRoute(req, res){
   const recipeData = req.body;
-  recipeData['creator'] = res.locals.user.id;
+  recipeData['creator'] = res.locals.currentUser.id;
   Recipe
     .create(req.body)
     .then( recipe =>{
@@ -68,7 +67,7 @@ function createCommentRoute(req, res){
     .exec()
     .then( recipe => {
       const commentData = req.body;
-      commentData.user = res.locals.user.id;
+      commentData.user = res.locals.currentUser.id;
       recipe.comments.push(commentData);
       recipe.save();
       return res. redirect(`/recipes/${recipe.id}`);

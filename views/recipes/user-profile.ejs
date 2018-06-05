@@ -1,15 +1,16 @@
-<% if(locals.isLoggedIn){%>
 <h2>My Recipes</h2>
 
-<ul class="columns">
-  <% locals.user.recipes.forEach( recipe =>{ %>
-    <ul class=" column is-one-quarter">
-      <li >
-        <a href="/recipes/<%= recipe.id %>"><%= recipe.title %>
-        <img style="height: 200px;" src='<%= recipe.url %>' alt='<%= recipe.title %>' />
-        </a>
-      </li>
+<ul class="columns is-multiline is-desktop is-tablet is-mobile">
+  <% locals.currentUser.recipes.forEach( recipe =>{ %>
+    <ul class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
+      <a id="recipe-link" href="/recipes/<%= recipe.id %>">
+        <li >
+          <h2><%= recipe.title %></h2>
+          <figure class="image is-square">
+            <img src='<%= recipe.url %>' alt='<%= recipe.title %>'/>
+          </figure>
+        </li>
+      </a>
     </ul>
   <% }) %>
 </ul>
-<% } %>

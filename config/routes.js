@@ -10,12 +10,21 @@ router.get('/', (req, res) => res.render('home', {
   isHomepage: true
 }));
 
+function secureRoute(req, res, next) {
+  if (res.locals.isloggedIn) {
+    next(); // allow the next route to run
+  } else {
+    // require the user to log in
+    res.redirect('/'); // or render a form, etc.
+  }
+}
+
 router.route('/register')
   .get(registrations.new)
   .post(registrations.create);
 
 router.route('/login')
-  .get(sessions.new)
+  .get( sessions.new)
   .post(sessions.create);
 
 router.route('/logout')

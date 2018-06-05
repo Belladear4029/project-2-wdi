@@ -47,7 +47,7 @@ app.use((req, res, next) => {
     .populate({path: 'recipes', populate: {path: 'creator'}})
     .exec()
     .then((user) =>{
-      res.locals.user = user;
+      res.locals.currentUser = user;
       res.locals.isLoggedIn = true;
       res.locals.isLoggedOut = false;
       next();

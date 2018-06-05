@@ -21,7 +21,8 @@ h5 {
 
 .button {
   border: solid 2px #FE5F55;
-  border-radius: 10px; }
+  border-radius: 10px;
+  margin-top: 10px; }
 
 .homepage .links {
   text-align: center;
@@ -61,7 +62,8 @@ h5 {
 #recipe-link {
   color: #4F6367; }
   #recipe-link h2 {
-    font-size: 16px; }
+    font-size: 16px;
+    margin-bottom: 5px; }
   #recipe-link:hover {
     color: #FE5F55; }
 
@@ -72,6 +74,9 @@ h5 {
 
 #recipe-title {
   font-size: 30px; }
+
+.show-ingredients ul {
+  list-style-type: circle; }
 
 .show-comments {
   margin-top: 30px; }
@@ -93,12 +98,14 @@ h5 {
       .show-comments #comments #username:hover {
         color: #FE5F55; }
     .show-comments #comments #comment {
-      font-size: 12px; }
+      font-size: 12px;
+      width: 80%; }
     .show-comments #comments #delete {
       color: #7A9E9F;
       font-size: 12px;
       font-weight: bold;
-      border: none; }
+      border: none;
+      margin-top: 0; }
       .show-comments #comments #delete:hover {
         color: #4F6367; }
   .show-comments #comment-input #textarea {

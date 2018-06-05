@@ -29,6 +29,7 @@ h5 {
 .button {
   border: solid 2px #FE5F55;
   border-radius: 10px;
+  margin-top: 10px;
 }
 
 //Homepage
@@ -90,6 +91,7 @@ h5 {
   color: #4F6367;
   h2 {
     font-size: 16px;
+    margin-bottom: 5px;
   }
   &:hover {
     color: #FE5F55;
@@ -109,7 +111,9 @@ h5 {
 }
 
 .show-ingredients {
-
+  ul {
+    list-style-type: circle;
+  }
 }
 
 .show-comments {
@@ -135,12 +139,14 @@ h5 {
     }
     #comment {
       font-size: 12px;
+      width: 80%;
     }
     #delete {
       color: #7A9E9F;
       font-size: 12px;
       font-weight: bold;
       border: none;
+      margin-top: 0;
       &:hover {
         color: #4F6367;
       }
