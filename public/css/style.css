@@ -75,6 +75,7 @@ h5 {
 .show-comments {
   margin-top: 30px; }
   .show-comments #comments {
+    display: flex;
     border: solid 1px #4F6367;
     border-radius: 10px;
     background-color: #fff;

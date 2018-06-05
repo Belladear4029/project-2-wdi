@@ -15,7 +15,7 @@ function showRoute(req, res){
     .findById(req.params.id)
     .populate('creator')
     .populate('comments.user')
-    .ingredients.split(', ')
+    // .ingredients.split(', ')
     .exec()
     .then( recipe =>{
       res.render('recipes/show', {recipe});
@@ -75,6 +75,20 @@ function createCommentRoute(req, res){
     });
 }
 
+function deleteCommentRoute(req, res, next){
+  Recipe
+    .findById(req.params.id)
+    .exec()
+    .then( recipe => {
+      const comment = recipe.comments.id(req.params.commentId);
+      console.log(comment);
+      comment.remove();
+      return recipe.save();
+    })
+    .then( recipe => res. redirect(`/recipes/${recipe.id}`))
+    .catch(next);
+}
+
 function myRecipesRoute(req, res){
   Recipe
     .find()
@@ -95,5 +109,6 @@ module.exports = {
   update: updateRoute,
   delete: deleteRoute,
   createComment: createCommentRoute,
+  deleteComment: deleteCommentRoute,
   userprofile: myRecipesRoute
 };

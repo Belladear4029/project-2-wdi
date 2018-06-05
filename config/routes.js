@@ -41,5 +41,7 @@ router.route('/recipes/:id/edit')
 
 router.route('/recipes/:id/comment')
   .post(recipes.createComment);
+router.route('/recipes/:id/comment/:commentId')
+  .delete(recipes.deleteComment);
 
 module.exports = router;
