@@ -11,7 +11,7 @@
       </a>
       <li>
       <% if(recipe.creator){ %>
-        By <%= recipe.creator.username %>
+        <a class="user-link" href="/users/<%= recipe.creator.id %>">By <%= recipe.creator.username %></a>
         <% } %>
       </li>
     </ul>

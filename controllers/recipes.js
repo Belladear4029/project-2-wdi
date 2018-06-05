@@ -13,6 +13,8 @@ function indexRoute(req, res){
 function showRoute(req, res){
   Recipe
     .findById(req.params.id)
+    .populate('creator')
+    .populate('comments.user')
     .exec()
     .then( recipe =>{
       res.render('recipes/show', {recipe});
@@ -65,7 +67,9 @@ function createCommentRoute(req, res){
     .findById(req.params.id)
     .exec()
     .then( recipe => {
-      recipe.comments.push(req.body);
+      const commentData = req.body;
+      commentData.user = res.locals.user.id;
+      recipe.comments.push(commentData);
       recipe.save();
       return res. redirect(`/recipes/${recipe.id}`);
     });
@@ -77,9 +81,11 @@ function myRecipesRoute(req, res){
     .populate('creator')
     .exec()
     .then( recipes =>{
-      res.render('recipes/profile', {recipes});
+      res.render('recipes/user-profile', {recipes});
     });
 }
+
+
 
 module.exports = {
   index: indexRoute,
@@ -90,5 +96,5 @@ module.exports = {
   update: updateRoute,
   delete: deleteRoute,
   createComment: createCommentRoute,
-  profile: myRecipesRoute
+  userprofile: myRecipesRoute
 };

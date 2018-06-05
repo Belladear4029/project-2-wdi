@@ -1,0 +1,14 @@
+<h2><%= user.username %>'s Recipes</h5>
+
+
+<ul class="columns">
+  <% user.recipes.forEach( recipe =>{ %>
+    <ul class=" column is-one-quarter">
+      <li >
+        <a href="/recipes/<%= recipe.id %>"><%= recipe.title %>
+        <img style="height: 200px;" src='<%= recipe.url %>' alt='<%= recipe.title %>' />
+        </a>
+      </li>
+    </ul>
+  <% }) %>
+</ul>

@@ -13,6 +13,7 @@
         <li><%= recipe.ingredients %></li>
       </ul>
     </div>
+    <% if(recipe.creator.toString() === locals.user.id){ %>
     <div class="show-buttons">
       <a class="button" href="/recipes/<%= recipe.id %>/edit">Edit</a>
       <form class="" action="/recipes/<%= recipe.id %>/" method="POST">
@@ -20,10 +21,12 @@
         <button class="button" name="button">Delete</button>
       </form>
     </div>
+    <% } %>
     <div class="show-comments">
       <h5>Comments</h5>
         <% recipe.comments.forEach( comment =>{ %>
-          <li id="comments"><span id="username"><%= comment.user %></span><span id="comment"><%=comment.content%></span></li>
+          <% %>
+          <li id="comments"><span id="username"><%= comment.user.username %></span><span id="comment"><%=comment.content%></span></li>
           <% }) %>
       <form id="comment-input" action="/recipes/<%= recipe.id %>/comment" method="POST">
         <textarea name="content" rows="8" cols="80"></textarea>

@@ -3,6 +3,7 @@ const router = express.Router();
 
 const registrations = require('../controllers/registrations');
 const sessions = require('../controllers/sessions');
+const users = require('../controllers/users');
 const recipes = require('../controllers/recipes');
 
 router.get('/', (req, res) => res.render('home', {
@@ -24,7 +25,11 @@ router.route('/recipes')
   .get(recipes.index)
   .post(recipes.create);
 router.route('/recipes/myrecipes')
-  .get(recipes.profile);
+  .get(recipes.userprofile);
+
+router.route('/users/:id')
+  .get(users.show);
+
 router.route('/recipes/new')
   .get(recipes.new);
 router.route('/recipes/:id')
