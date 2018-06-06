@@ -53,4 +53,7 @@ router.route('/recipes/:id/comment')
 router.route('/recipes/:id/comment/:commentId')
   .delete(recipes.deleteComment);
 
+router.route('/recipes/:id/like')
+  .put(recipes.addLike);
+
 module.exports = router;

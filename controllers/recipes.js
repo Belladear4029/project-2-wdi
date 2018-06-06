@@ -1,4 +1,5 @@
 const Recipe = require('../models/recipe.js');
+Recipe.likes = 0;
 
 function indexRoute(req, res){
   Recipe
@@ -97,6 +98,19 @@ function myRecipesRoute(req, res){
     });
 }
 
+function addLikeRoute(req, res){
+  Recipe
+    .findById(req.params.id)
+    .exec()
+    .then( recipe => {
+      console.log('count', recipe.likes);
+      recipe.likes ++;
+      console.log('count+1', recipe.likes);
+      recipe.save();
+      return res. redirect(`/recipes/${recipe.id}`);
+    });
+}
+
 
 module.exports = {
   index: indexRoute,
@@ -108,5 +122,6 @@ module.exports = {
   delete: deleteRoute,
   createComment: createCommentRoute,
   deleteComment: deleteCommentRoute,
-  userprofile: myRecipesRoute
+  userprofile: myRecipesRoute,
+  addLike: addLikeRoute
 };

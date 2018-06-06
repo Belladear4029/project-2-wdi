@@ -40,20 +40,21 @@ h5 {
   margin-top: 20px; }
 
 .navbar {
-  background-color: #4F6367; }
-  .navbar h1 {
+  background-color: #4F6367;
+  color: #eef5db; }
+  .navbar .navbar-brand h1 {
     font-size: 30px;
     color: #eef5db; }
-  .navbar h1:hover {
+  .navbar .navbar-brand h1:hover {
     color: #FE5F55; }
-  .navbar .navbar-burger {
-    color: #eef5db; }
+  .navbar .navbar-brand .navbar-start {
+    padding-top: 20px;
+    padding-left: 20px; }
+  .navbar .navbar-brand .navbar-burger {
+    color: #eef5db;
+    background-color: #4F6367; }
   .navbar .navbar-menu {
     color: #eef5db; }
-    .navbar .navbar-menu .navbar-start {
-      color: #FE5F55;
-      padding-top: 20px;
-      padding-left: 20px; }
     .navbar .navbar-menu a {
       color: #eef5db; }
     .navbar .navbar-menu a:hover {
@@ -76,14 +77,43 @@ h5 {
 #recipe-title {
   font-size: 30px; }
 
-.show-ingredients #ingredients-list {
-  display: list-item;
-  list-style-type: circle;
-  margin-left: 20px;
-  font-size: 15px; }
+.recipe {
+  display: flex; }
+  .recipe .show-ingredients {
+    width: 50%; }
+    .recipe .show-ingredients #ingredients-list {
+      display: list-item;
+      list-style-type: circle;
+      margin-left: 20px;
+      font-size: 15px; }
+  .recipe .show-method {
+    width: 50%; }
+
+.likes {
+  margin-top: 10px; }
+  .likes #like {
+    font-size: 20px;
+    margin-left: 10px; }
+  .likes .like-button {
+    display: block;
+    margin: 10px auto 0 0;
+    background: #FE5F55;
+    border-radius: 3px;
+    padding: 6px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease; }
+    .likes .like-button:hover {
+      transform: translateY(-3px); }
+    .likes .like-button .fa {
+      margin-right: 5px; }
 
 .show-comments {
-  margin-top: 30px; }
+  margin-top: 10px; }
   .show-comments #comments {
     display: flex;
     align-items: center;

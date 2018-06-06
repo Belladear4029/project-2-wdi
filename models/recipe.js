@@ -9,6 +9,8 @@ const recipeSchema = new mongoose.Schema({
   title: String,
   url: String,
   ingredients: String,
+  method: String,
+  likes: Number,
   creator: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
   comments: [commentSchema]
 });

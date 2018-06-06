@@ -7,14 +7,20 @@
       <% } %>
   </div>
   <div class="column is-half">
-    <div class="show-ingredients">
+    <div class="recipe">
+      <div class="show-ingredients">
         <h5>Ingredients</h5>
         <% recipe.ingredients.split(', ').forEach( ingredient =>{ %>
           <ul id="ingredients-list">
-            <li><%= ingredient %></li>
+          <li><%= ingredient %></li>
           </ul>
-        <% }) %>
+          <% }) %>
       </div>
+      <div class="show-method">
+        <h5>Method</h5>
+        <p><%= recipe.method %></p>
+      </div>
+    </div>
     <% if(recipe.creator.id === locals.currentUser.id){ %>
       <div class="show-buttons">
         <a class="button" href="/recipes/<%= recipe.id %>/edit">Edit</a>
@@ -24,6 +30,14 @@
         </form>
       </div>
     <% } %>
+    <div class="likes">
+      <%console.log(recipe.likes) %>
+      <p id="like"> <%= recipe.likes %> &hearts;</p>
+      <form id="comment-input" action="/recipes/<%= recipe.id %>/like" method="POST">
+        <input type="hidden" name="_method" value="PUT">
+        <button class="like-button"><i class="fa" aria-hidden="true"></i>Like</button>
+      </form>
+    </div>
     <div class="show-comments">
       <h5>Comments</h5>
         <% recipe.comments.forEach( comment =>{ %>
