@@ -20,9 +20,9 @@ h5 {
   font-size: 20px; }
 
 .button {
-  border: solid 2px #FE5F55;
+  border: solid 1px #FE5F55;
   border-radius: 10px;
-  margin-top: 10px; }
+  line-height: 0; }
 
 .homepage .links {
   text-align: center;
@@ -51,6 +51,7 @@ h5 {
   .navbar .navbar-menu {
     color: #eef5db; }
     .navbar .navbar-menu .navbar-start {
+      color: #FE5F55;
       padding-top: 20px;
       padding-left: 20px; }
     .navbar .navbar-menu a {
@@ -75,8 +76,11 @@ h5 {
 #recipe-title {
   font-size: 30px; }
 
-.show-ingredients ul {
-  list-style-type: circle; }
+.show-ingredients #ingredients-list {
+  display: list-item;
+  list-style-type: circle;
+  margin-left: 20px;
+  font-size: 15px; }
 
 .show-comments {
   margin-top: 30px; }
@@ -121,5 +125,8 @@ h5 {
   margin-top: 20px; }
   .show-buttons .button {
     margin-right: 20px; }
+
+#submit {
+  margin-top: 10px; }
 
 /*# sourceMappingURL=style.css.map */

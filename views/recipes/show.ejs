@@ -10,7 +10,7 @@
     <div class="show-ingredients">
         <h5>Ingredients</h5>
         <% recipe.ingredients.split(', ').forEach( ingredient =>{ %>
-          <ul>
+          <ul id="ingredients-list">
             <li><%= ingredient %></li>
           </ul>
         <% }) %>

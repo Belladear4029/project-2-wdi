@@ -49,7 +49,6 @@ app.use((req, res, next) => {
     .then((user) =>{
       res.locals.currentUser = user;
       res.locals.isLoggedIn = true;
-      res.locals.isLoggedOut = false;
       next();
     });
 });

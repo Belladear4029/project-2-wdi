@@ -27,9 +27,9 @@ h5 {
 }
 
 .button {
-  border: solid 2px #FE5F55;
+  border: solid 1px #FE5F55;
   border-radius: 10px;
-  margin-top: 10px;
+  line-height: 0;
 }
 
 //Homepage
@@ -72,6 +72,7 @@ h5 {
   .navbar-menu {
     color: #eef5db;
     .navbar-start {
+      color: #FE5F55;
       padding-top: 20px;
       padding-left: 20px;
     }
@@ -111,8 +112,11 @@ h5 {
 }
 
 .show-ingredients {
-  ul {
+  #ingredients-list {
+    display: list-item;
     list-style-type: circle;
+    margin-left: 20px;
+    font-size: 15px;
   }
 }
 
@@ -173,9 +177,9 @@ h5 {
   }
 }
 
-
-
 //new recipe
-
+#submit {
+  margin-top: 10px;
+}
 
 //edit recipe
