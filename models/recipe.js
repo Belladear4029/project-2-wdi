@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+// const textSearch = require('mongoose-text-search');
 
 const commentSchema = new mongoose.Schema({
   content: String,
@@ -11,8 +12,13 @@ const recipeSchema = new mongoose.Schema({
   ingredients: String,
   method: String,
   likes: Number,
+  likers: [],
   creator: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
   comments: [commentSchema]
 });
+
+// recipeSchema.plugin(textSearch);
+// recipeSchema.index({title: 'text'}, {ingredients: 'text'});
+
 
 module.exports = mongoose.model('recipe', recipeSchema);

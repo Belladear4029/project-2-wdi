@@ -56,4 +56,8 @@ router.route('/recipes/:id/comment/:commentId')
 router.route('/recipes/:id/like')
   .put(recipes.addLike);
 
+router.route('/recipes/:id/likers')
+  .get(recipes.likers);
+
+
 module.exports = router;

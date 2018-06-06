@@ -103,13 +103,29 @@ function addLikeRoute(req, res){
     .findById(req.params.id)
     .exec()
     .then( recipe => {
-      console.log('count', recipe.likes);
-      recipe.likes ++;
-      console.log('count+1', recipe.likes);
+      recipe.likes ? recipe.likes ++ : recipe.likes = 1;
+      recipe.likers.push(res.locals.currentUser.username);
       recipe.save();
       return res. redirect(`/recipes/${recipe.id}`);
     });
 }
+
+function likersRoute(req, res){
+  Recipe
+    .find()
+    .populate('creator')
+    .exec()
+    .then( recipes =>{
+      res.render('recipes/likers', {recipes});
+    });
+}
+
+// function searchRoute(req, res) {
+//   Recipe
+//     .textSearch(input, => {
+//       if (err) return handleError(err);
+//     })
+// }
 
 
 module.exports = {
@@ -123,5 +139,6 @@ module.exports = {
   createComment: createCommentRoute,
   deleteComment: deleteCommentRoute,
   userprofile: myRecipesRoute,
-  addLike: addLikeRoute
+  addLike: addLikeRoute,
+  likers: likersRoute
 };

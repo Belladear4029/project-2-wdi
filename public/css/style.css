@@ -68,6 +68,8 @@ h5 {
     margin-bottom: 5px; }
   #recipe-link:hover {
     color: #FE5F55; }
+  #recipe-link #recipe-image:hover {
+    transform: scale(1.01); }
 
 .user-link {
   color: #7A9E9F; }
@@ -108,7 +110,7 @@ h5 {
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease; }
     .likes .like-button:hover {
-      transform: translateY(-3px); }
+      transform: scale(1.1); }
     .likes .like-button .fa {
       margin-right: 5px; }
 
