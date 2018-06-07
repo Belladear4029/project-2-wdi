@@ -75,8 +75,10 @@ h5 {
     margin-bottom: 5px; }
   .recipe-link:hover {
     color: #FE5F55; }
-  .recipe-link .recipe-image:hover {
-    transform: scale(1.01); }
+  .recipe-link .recipe-image {
+    transition: 0.3s ease; }
+    .recipe-link .recipe-image:hover {
+      transform: scale(1.01); }
 
 .user-link {
   color: #7A9E9F; }
@@ -106,7 +108,10 @@ h5 {
   margin-top: 10px; }
   .likes #like {
     font-size: 20px;
-    margin-left: 10px; }
+    margin-left: 10px;
+    color: #4F6367; }
+    .likes #like:hover {
+      color: #FE5F55; }
   .likes #likers {
     font-size: 12px;
     margin-left: 5px;
@@ -116,18 +121,15 @@ h5 {
     margin: 10px auto 0 0;
     background: #FE5F55;
     border-radius: 3px;
-    padding: 6px 10px;
+    padding: 6px 12px;
     font-size: 14px;
     cursor: pointer;
     border: none;
     outline: none;
     color: #ffffff;
-    -webkit-transition: 0.3s ease;
     transition: 0.3s ease; }
     .likes .like-button:hover {
       transform: scale(1.1); }
-    .likes .like-button .fa {
-      margin-right: 5px; }
 
 .show-buttons {
   display: inline-flex;
