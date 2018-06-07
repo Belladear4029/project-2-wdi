@@ -121,14 +121,15 @@ function likersRoute(req, res){
 }
 
 function searchRoute(req, res) {
-
   Recipe
-    .textSearch(req.params.search_bar, function (err, output) {
-      if (err){
-        console.log(err)
-      }
-      console.log(output);
-    })
+    .find(
+      {'$text': {'$search': req.body.search_bar}}
+    )
+    .populate('creator')
+    .exec()
+    .then( recipes =>{
+      res.render('recipes/index', {recipes});
+    });
 }
 
 

@@ -18,7 +18,5 @@ const recipeSchema = new mongoose.Schema({
 });
 
 recipeSchema.plugin(textSearch);
-// recipeSchema.index({title: 'text'}, {ingredients: 'text'});
-
 
 module.exports = mongoose.model('recipe', recipeSchema);

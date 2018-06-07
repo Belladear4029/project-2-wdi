@@ -1,4 +1,4 @@
 module.exports = {
   port: process.env.PORT || 3000,
-  dbURI: process.env.MONGODB_URI || 'mongodb://localhost/example-app-with-amazon-upload'
+  dbURI: process.env.MONGODB_URI || 'mongodb://localhost/mongo-intro'
 };
