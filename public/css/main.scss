@@ -38,7 +38,7 @@ h5 {
   .links {
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 400px;
+    margin-bottom: 353px;
     .link {
       margin: 50px 20px;
       color: #FE5F55;
@@ -86,16 +86,19 @@ h5 {
       line-height: 60px;
       margin-right: 25px;
       #search-input {
+        font-size: 13px;
         border-radius: 5px;
         border: solid 1px grey;
         height: 30px;
         padding-left: 10px;
       }
       #search-button {
+        font-size: 13px;
         background-color: #eef5db;
         color: #4F6367;
         border-radius: 5px;
         height: 30px;
+        padding-bottom: 1px;
       }
     }
     .navbar-item {
