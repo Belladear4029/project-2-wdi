@@ -14,7 +14,8 @@ h1 {
   color: #4F6367; }
 
 h2 {
-  font-size: 30px; }
+  font-size: 30px;
+  text-transform: capitalize; }
 
 h5 {
   font-size: 20px; }
@@ -50,10 +51,25 @@ h5 {
   .navbar .navbar-brand .navbar-start {
     padding-top: 20px;
     padding-left: 20px; }
+    .navbar .navbar-brand .navbar-start p {
+      text-transform: capitalize; }
   .navbar .navbar-brand .navbar-burger {
     color: #eef5db; }
   .navbar .navbar-menu {
     background-color: #4F6367; }
+    .navbar .navbar-menu .search {
+      line-height: 60px;
+      margin-right: 25px; }
+      .navbar .navbar-menu .search #search-input {
+        border-radius: 5px;
+        border: solid 1px grey;
+        height: 30px;
+        padding-left: 10px; }
+      .navbar .navbar-menu .search #search-button {
+        background-color: #eef5db;
+        color: #4F6367;
+        border-radius: 5px;
+        height: 30px; }
     .navbar .navbar-menu .navbar-item {
       color: #eef5db; }
       .navbar .navbar-menu .navbar-item:hover {
@@ -81,7 +97,8 @@ h5 {
       transform: scale(1.01); }
 
 .user-link {
-  color: #7A9E9F; }
+  color: #7A9E9F;
+  text-transform: capitalize; }
   .user-link:hover {
     color: #4F6367; }
 

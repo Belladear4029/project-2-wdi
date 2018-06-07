@@ -120,12 +120,16 @@ function likersRoute(req, res){
     });
 }
 
-// function searchRoute(req, res) {
-//   Recipe
-//     .textSearch(input, => {
-//       if (err) return handleError(err);
-//     })
-// }
+function searchRoute(req, res) {
+
+  Recipe
+    .textSearch(req.params.search_bar, function (err, output) {
+      if (err){
+        console.log(err)
+      }
+      console.log(output);
+    })
+}
 
 
 module.exports = {
@@ -140,5 +144,6 @@ module.exports = {
   deleteComment: deleteCommentRoute,
   userprofile: myRecipesRoute,
   addLike: addLikeRoute,
-  likers: likersRoute
+  likers: likersRoute,
+  search: searchRoute
 };

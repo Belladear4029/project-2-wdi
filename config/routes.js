@@ -59,5 +59,8 @@ router.route('/recipes/:id/like')
 router.route('/recipes/:id/likers')
   .get(recipes.likers);
 
+router.route('/recipes/search')
+  .post(recipes.search);
+
 
 module.exports = router;

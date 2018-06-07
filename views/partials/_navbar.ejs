@@ -4,7 +4,7 @@
       <h1 id="navbar-header">Instagrub</h1>
     </a>
     <div class="navbar-start">
-      <p>Welcome <%= locals.currentUser.username %></p>
+      <p class="username">Welcome <%= locals.currentUser.username %></p>
     </div>
     <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
@@ -14,8 +14,11 @@
   </div>
   <div class="navbar-menu" id="navMenu">
     <div class="navbar-end">
-      <%# <input id="search-input" type="text" placeholder="Search..." name="search-bar">
-      <button id="search-button" type="button" name="search-button">Search</button> %>
+      <form class="search" action="/recipes/search" method="post">
+        <input id="search-input" type="text" placeholder="Search..." name="search_bar">
+        <button id="search-button" name="search-button">Search</button>
+      </form>
+
       <a href="/recipes" class="navbar-item">
         All recipes
       </a>

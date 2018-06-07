@@ -20,6 +20,7 @@ h1 {
 
 h2 {
   font-size: 30px;
+  text-transform: capitalize;
 }
 
 h5 {
@@ -71,6 +72,9 @@ h5 {
     .navbar-start {
       padding-top: 20px;
       padding-left: 20px;
+      p {
+        text-transform: capitalize;
+      }
     }
     .navbar-burger {
       color: #eef5db;
@@ -78,6 +82,22 @@ h5 {
   }
   .navbar-menu {
     background-color: #4F6367;
+    .search {
+      line-height: 60px;
+      margin-right: 25px;
+      #search-input {
+        border-radius: 5px;
+        border: solid 1px grey;
+        height: 30px;
+        padding-left: 10px;
+      }
+      #search-button {
+        background-color: #eef5db;
+        color: #4F6367;
+        border-radius: 5px;
+        height: 30px;
+      }
+    }
     .navbar-item {
       color: #eef5db;
       &:hover {
@@ -120,6 +140,7 @@ h5 {
 
 .user-link {
   color: #7A9E9F;
+  text-transform: capitalize;
   &:hover {
     color: #4F6367;
   }
