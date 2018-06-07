@@ -6,12 +6,11 @@ const expressLayouts = require('express-ejs-layouts');
 const session = require('express-session');
 const mongoose = require('mongoose');
 
-const routes = require('./config/routes');
 const User = require('./models/user');
+const routes = require('./config/routes');
+const { port, dbURI } = require('./config/environment');
 
-const databaseURI = 'mongodb://localhost/mongo-intro';
-
-mongoose.connect(databaseURI);
+mongoose.connect(dbURI);
 
 const app = express();
 
@@ -55,4 +54,4 @@ app.use((req, res, next) => {
 
 app.use(routes);
 
-app.listen(4000, () => console.log('Express started on port: 4000'));
+app.listen(port, () => console.log('Express started on port: 3000'));
