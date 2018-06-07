@@ -21,12 +21,14 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
-  const liker = document.querySelectorAll('#liker');
-  console.log(liker);
-  // liker.hide();
 
-  document.querySelectorAll('#like').addEventListener('click', function () {
-    liker.show();
+  const $like = $('#like');
+  const $liker = $('#likers');
+  console.log($liker);
+  $liker.hide();
+
+  $like.click(function () {
+    $liker.show();
   });
 
 });

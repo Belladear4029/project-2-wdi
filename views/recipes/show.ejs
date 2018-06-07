@@ -1,7 +1,7 @@
 <h2 id="recipe-title">  <%= recipe.title %></h2>
 <div class="columns">
   <div class="column is-half">
-    <img src="<%= recipe.url %>" alt="<%= recipe.title %>" />
+    <img id="show-recipe-image" src="<%= recipe.url %>" alt="<%= recipe.title %>" />
     <% if (recipe.creator){ %>
       <a class="user-link" href="/users/<%= recipe.creator.id %>"><h5>By <%= recipe.creator.username %></h5></a>
       <% } %>

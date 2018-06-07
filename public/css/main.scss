@@ -74,17 +74,27 @@ h5 {
     }
     .navbar-burger {
       color: #eef5db;
-      background-color: #4F6367;
     }
   }
   .navbar-menu {
-    color: #eef5db;
-    a {
+    background-color: #4F6367;
+    .navbar-item {
       color: #eef5db;
+      &:hover {
+        color: #FE5F55;
+        background-color: #eef5db;
+      }
     }
-    a:hover {
-      color: #FE5F55;
-      background-color: #eef5db;
+    .navbar-menu.is-active {
+      color: #eef5db;
+      background-color: #4F6367;
+      a {
+        color: #eef5db;
+      }
+      &:hover {
+        color: #FE5F55;
+        background-color: #eef5db;
+      }
     }
   }
 }
@@ -115,6 +125,10 @@ h5 {
 //show
 #recipe-title {
   font-size: 30px;
+}
+
+#show-recipe-image {
+  margin-top: 5px;
 }
 
 .recipe {

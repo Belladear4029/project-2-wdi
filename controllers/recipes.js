@@ -71,7 +71,7 @@ function createCommentRoute(req, res){
       commentData.user = res.locals.currentUser.id;
       recipe.comments.push(commentData);
       recipe.save();
-      return res. redirect(`/recipes/${recipe.id}`);
+      return res.redirect(`/recipes/${recipe.id}`);
     });
 }
 
@@ -84,7 +84,7 @@ function deleteCommentRoute(req, res, next){
       comment.remove();
       return recipe.save();
     })
-    .then( recipe => res. redirect(`/recipes/${recipe.id}`))
+    .then( recipe => res.redirect(`/recipes/${recipe.id}`))
     .catch(next);
 }
 
@@ -106,7 +106,7 @@ function addLikeRoute(req, res){
       recipe.likes ? recipe.likes ++ : recipe.likes = 1;
       recipe.likers.push(res.locals.currentUser.username);
       recipe.save();
-      return res. redirect(`/recipes/${recipe.id}`);
+      return res.redirect(`/recipes/${recipe.id}`);
     });
 }
 
