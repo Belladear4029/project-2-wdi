@@ -35,7 +35,8 @@
       <p> <a id="like"> <%= recipe.likes %> &hearts;</a>
         <span id="likers">
         <% recipe.likers.forEach( liker => { %>
-          <% if(recipe.likers[recipe.likers.length-1]) { %>
+          <% console.log(recipe.likers[recipe.likers.length-1]) %>
+          <% if(liker === recipe.likers[recipe.likers.length-1]) { %>
             <%= liker %>
             <% } else { %>
               <%= liker + ', ' %>
@@ -44,7 +45,7 @@
         </span></p>
       <form id="comment-input" action="/recipes/<%= recipe.id %>/like" method="POST">
         <input type="hidden" name="_method" value="PUT">
-        <button class="like-button"><i class="fa" aria-hidden="true"></i>Like</button>
+        <button class="like-button">Like</button>
       </form>
     </div>
     <div class="show-comments">
