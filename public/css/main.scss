@@ -240,9 +240,11 @@ h5 {
 }
 
 
-//new recipe
+//new and edit recipe
 #submit {
   margin-top: 10px;
 }
 
-//edit recipe
+#method-input {
+  min-height: 150px;
+}
