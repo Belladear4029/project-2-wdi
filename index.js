@@ -54,4 +54,4 @@ app.use((req, res, next) => {
 
 app.use(routes);
 
-app.listen(port, () => console.log('Express started on port: 3000'));
+app.listen(port, () => console.log('Express started on port:'));
