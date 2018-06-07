@@ -124,6 +124,7 @@ h5 {
     #ingredients-list {
       display: list-item;
       list-style-type: circle;
+      text-transform: capitalize;
       margin-left: 20px;
       font-size: 15px;
     }
@@ -138,6 +139,11 @@ h5 {
   #like {
     font-size: 20px;
     margin-left: 10px;
+  }
+  #likers{
+    font-size: 12px;
+    margin-left: 5px;
+    line-height: 0;
   }
   .like-button {
     display: block;
@@ -158,6 +164,15 @@ h5 {
     .fa {
       margin-right: 5px;
     }
+  }
+}
+
+.show-buttons {
+  display: inline-flex;
+  margin-top: 20px;
+  .button{
+    margin-right: 20px;
+    font-size: 10px;
   }
 }
 
@@ -210,13 +225,6 @@ h5 {
   }
 }
 
-.show-buttons {
-  display: inline-flex;
-  margin-top: 20px;
-  .button{
-    margin-right: 20px;
-  }
-}
 
 //new recipe
 #submit {

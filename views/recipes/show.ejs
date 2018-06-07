@@ -15,24 +15,23 @@
           <li><%= ingredient %></li>
           </ul>
           <% }) %>
+          <% if(recipe.creator.id === locals.currentUser.id){ %>
+            <div class="show-buttons">
+            <a class="button" href="/recipes/<%= recipe.id %>/edit">Edit</a>
+            <form class="" action="/recipes/<%= recipe.id %>/" method="POST">
+            <input type="hidden" name="_method" value="DELETE">
+            <button class="button" name="button">Delete</button>
+            </form>
+            </div>
+            <% } %>
       </div>
       <div class="show-method">
         <h5>Method</h5>
         <p><%= recipe.method %></p>
       </div>
     </div>
-    <% if(recipe.creator.id === locals.currentUser.id){ %>
-      <div class="show-buttons">
-        <a class="button" href="/recipes/<%= recipe.id %>/edit">Edit</a>
-        <form class="" action="/recipes/<%= recipe.id %>/" method="POST">
-          <input type="hidden" name="_method" value="DELETE">
-          <button class="button" name="button">Delete</button>
-        </form>
-      </div>
-    <% } %>
     <div class="likes">
-      <a id="like"> <%= recipe.likes %> &hearts;</a>
-      <p id="likers"><%= recipe.likers %></p>
+      <p> <a id="like"> <%= recipe.likes %> &hearts;</a>  <span id="likers"><%= recipe.likers %></span></p>
       <form id="comment-input" action="/recipes/<%= recipe.id %>/like" method="POST">
         <input type="hidden" name="_method" value="PUT">
         <button class="like-button"><i class="fa" aria-hidden="true"></i>Like</button>

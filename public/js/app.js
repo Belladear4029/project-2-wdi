@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   const liker = document.querySelectorAll('#liker');
   console.log(liker);
-  liker.hide();
+  // liker.hide();
 
   document.querySelectorAll('#like').addEventListener('click', function () {
     liker.show();
