@@ -3,11 +3,11 @@
 <ul class="columns is-multiline is-desktop is-tablet is-mobile">
   <% recipes.forEach( recipe =>{ %>
     <ul class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
-      <a id="recipe-link" href="/recipes/<%= recipe.id %>">
+      <a class="recipe-link" href="/recipes/<%= recipe.id %>">
         <li >
           <h2><%= recipe.title %></h2>
           <figure class="image is-square">
-            <img id="recipe-image" src='<%= recipe.url %>' alt='<%= recipe.title %>'/>
+            <img class="recipe-image" src='<%= recipe.url %>' alt='<%= recipe.title %>'/>
           </figure>
         </li>
       </a>

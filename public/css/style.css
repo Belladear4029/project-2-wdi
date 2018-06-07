@@ -68,14 +68,14 @@ h5 {
         color: #FE5F55;
         background-color: #eef5db; }
 
-#recipe-link {
+.recipe-link {
   color: #4F6367; }
-  #recipe-link h2 {
+  .recipe-link h2 {
     font-size: 16px;
     margin-bottom: 5px; }
-  #recipe-link:hover {
+  .recipe-link:hover {
     color: #FE5F55; }
-  #recipe-link #recipe-image:hover {
+  .recipe-link .recipe-image:hover {
     transform: scale(1.01); }
 
 .user-link {

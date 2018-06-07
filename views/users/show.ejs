@@ -1,14 +1,16 @@
 <h2><%= user.username %>'s Recipes</h5>
 
-
-<ul class="columns">
+<ul class="columns is-multiline is-desktop is-tablet is-mobile">
   <% user.recipes.forEach( recipe =>{ %>
-    <ul class=" column is-one-quarter">
-      <li >
-        <a href="/recipes/<%= recipe.id %>"><%= recipe.title %>
-        <img style="height: 200px;" src='<%= recipe.url %>' alt='<%= recipe.title %>' />
-        </a>
-      </li>
+    <ul class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
+      <a class="recipe-link" href="/recipes/<%= recipe.id %>">
+        <li >
+          <h2><%= recipe.title %></h2>
+          <figure class="image is-square">
+            <img class="recipe-image" src='<%= recipe.url %>' alt='<%= recipe.title %>'/>
+          </figure>
+        </li>
+      </a>
     </ul>
   <% }) %>
 </ul>

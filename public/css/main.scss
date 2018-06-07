@@ -101,7 +101,7 @@ h5 {
 
 
 //index
-#recipe-link {
+.recipe-link {
   color: #4F6367;
   h2 {
     font-size: 16px;
@@ -110,7 +110,7 @@ h5 {
   &:hover {
     color: #FE5F55;
   }
-  #recipe-image:hover {
+  .recipe-image:hover {
     transform: scale(1.01);
   }
 }
