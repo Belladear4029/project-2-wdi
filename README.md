@@ -7,4 +7,10 @@ Technologies used in the project were JavaScript, HTML, SCSS, MongoDB, Express.j
 
 This app is deployed on [Heroku](https://instagrub-app.herokuapp.com/).
 
+When the app is loaded, you are immediately taken to you login/sign up page. You have to be logged in to view any recipes.
+
 <p align="center"><img src="https://imgur.com/02NOfHF.png" width="700"></p>
+
+Once logged in you are taken to the homepage of all the recipes. This is the list of every single recipe someone has added. Alternatively you are able to click on the name of the chef below the recipe image to just see recipes made by them.
+
+<p align="center"><img src="https://imgur.com/uKOxzDE.png" width="700"></p>
