@@ -41,7 +41,7 @@ Joining the comments I also added a like button so users are able to like their 
 
 #### Mobile Responsive
 
-<p align="center"><img src="https://imgur.com/BfAe5qJ.png" width="700"></p>
+<p align="center"><img src="https://imgur.com/xIZ6daP.png" width="700"></p>
 
 ### Challenges
 
