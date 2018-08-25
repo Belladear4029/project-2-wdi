@@ -3,7 +3,8 @@
 
 This was an individual project creating a full stack app using Express and EJS. I decided to create an app that would be an Instagram for food recipes, you are able to scroll through recipes and add and share your own.
 
-Technologies used in the project were JavaScript, HTML, SCSS, MongoDB, Express.js and EJS.
+#### Technologies Used
+HTML | SCSS | JavaScript (ES6) | MongoDB | Express.js | EJS
 
 This app is deployed on [Heroku](https://instagrub-app.herokuapp.com/).
 
@@ -45,12 +46,12 @@ Joining the comments I also added a like button so users are able to like their 
 
 ### Challenges
 
-One of the challenges I faced was restricting a user to only being able to like a recipe once.
+One of the challenges I faced was restricting a user to only being able to like a recipe once. If I had more time, I would have restricted this.
 
 ### Further Additions
 
 #### Ingredients Filter
-I would like to add an additional feature in which you could enter the ingredients that you have at home and this would filter the recipes down to just the ones which include those ingredients. It could display recipes with only the chosen ingredients, then display recipes with one extra ingredient, then two and so on.
+I would like to add an additional feature in which you could enter the ingredients that you have at home and this would filter the recipes down to just the ones which include those ingredients. It could display recipes with only the chosen ingredients first, then display recipes with one extra ingredient, then two and so on.
 
 #### Liked Recipes Stored
 I would also like to add a section in the current users profile where they can see all the recipes they have liked. This way they can store their favourite recipes and easily come back to them in the future.
