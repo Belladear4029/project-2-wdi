@@ -8,6 +8,8 @@ HTML | SCSS | JavaScript (ES6) | MongoDB | Express.js | EJS
 
 This app is deployed on [Heroku](https://instagrub-app.herokuapp.com/).
 
+***
+
 ### The App
 
 When the app is loaded, you are immediately taken to you login/sign up page. You have to be logged in to view any recipes.
