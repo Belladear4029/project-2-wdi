@@ -4,7 +4,7 @@
 This was an individual project creating a full stack app using Express and EJS. I decided to create an app that would be an Instagram for food recipes, you are able to scroll through recipes and add and share your own.
 
 #### Technologies Used
-HTML | SCSS | JavaScript (ES6) | MongoDB | Express.js | EJS
+HTML | SCSS | JavaScript (ES6) | MongoDB | Express.js | EJS | Node.js | Mongoose
 
 This app is deployed on [Heroku](https://instagrub-app.herokuapp.com/).
 
