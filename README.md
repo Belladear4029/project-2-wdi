@@ -4,7 +4,7 @@
 This was an individual project creating a full stack app using Express and EJS. I decided to create an app that would be an Instagram for food recipes, you are able to scroll through recipes and add and share your own.
 
 #### Technologies Used
-HTML | SCSS | JavaScript (ES6) | MongoDB | Express.js | EJS | Node.js | Mongoose
+HTML | SCSS | JavaScript (ES6) | MongoDB | Express | EJS | Node.js | Mongoose
 
 This app is deployed on [Heroku](https://instagrub-app.herokuapp.com/).
 
@@ -12,11 +12,11 @@ This app is deployed on [Heroku](https://instagrub-app.herokuapp.com/).
 
 ### The App
 
-When the app is loaded, you are immediately taken to you login/sign up page. You have to be logged in to view any recipes.
+When the app is loaded, you are immediately taken to the login/sign up page. You have to be logged in to view any recipes.
 
 <p align="center"><img src="https://imgur.com/02NOfHF.png" width="700"></p>
 
-Once logged in you are taken to the homepage of all the recipes. This is the list of every single recipe someone has added. Alternatively you are able to click on the name of the chef below the recipe image to just see recipes made by them.
+Once logged in you are taken to the homepage of all the recipes. This is a list of every recipe that has been added by all users. Alternatively, you are able to click on the name of the chef below each recipe image to just see recipes made by them.
 
 <p align="center"><img src="https://imgur.com/uKOxzDE.png" width="700"></p>
 
@@ -28,13 +28,13 @@ When adding a recipe the user is given a form to fill in. This consists of the t
 
 <p align="center"><img src="https://imgur.com/akk3b2i.png" width="700"></p>
 
-Once the user has entered all the requirements they can submit it. The ingredients automatically get made into a list, giving a new bullet point for each item by replacing the comma and space. They also get capitalised along with the title of the meal. So the submit recipe looks like the screenshot below.
+Once the user has entered all the requirements they can submit it. The ingredients automatically get made into a list, giving a new bullet point for each item by replacing the comma and space. Each ingredient also gets capitalised along with the title of the meal. So each submitted recipe would look something like the screenshot below.
 
 <p align="center"><img src="https://imgur.com/GvXzdsx.png" width="700"></p>
 
 #### Commenting and Liking
 
-I added a feature so you can post a comment on a recipe. This enables users to share their feedback and also helps to single out the top recipes based on multiple users' feedback.
+I added a feature so users are able to post comments on a recipe. This enables users to share their feedback and also helps to single out the top recipes based on multiple users' feedback.
 
 <p align="center"><img src="https://imgur.com/tUiIbYM.gif" width="700"></p>
 
@@ -43,6 +43,8 @@ Joining the comments I also added a like button so users are able to like their 
 <p align="center"><img src="https://imgur.com/pw4Ksmz.gif" width="700"></p>
 
 #### Mobile Responsive
+
+I made it so this app would be available for mobiles and tablets as well.
 
 <p align="center"><img src="https://imgur.com/xIZ6daP.png" width="700"></p>
 
